@@ -1,0 +1,15 @@
+{
+  "name": "vivliostyle-playground",
+  "description": "vivliostyle-playground",
+  "version": "0.0.0",
+  "author": "kyonenya <kyon.musica@gmail.com>",
+  "scripts": {
+    "build": "vivliostyle build",
+    "preview": "vivliostyle preview"
+  },
+  "dependencies": {
+    "@vivliostyle/cli": "latest"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "type": "Book",
+  "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
+  "name": "vivliostyle-playground",
+  "author": "kyonenya <kyon.musica@gmail.com>",
+  "dateModified": "2025-02-02T14:06:04.770Z",
+  "readingOrder": [
+    {
+      "url": "manuscript.html",
+      "name": "吾輩は猫である。"
+    }
+  ],
+  "resources": [],
+  "links": []
+}
