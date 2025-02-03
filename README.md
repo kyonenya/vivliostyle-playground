@@ -1,5 +1,7 @@
 # vivliostyle-playground
 
+- CSS変数一覧：[themes/packages/@vivliostyle/theme-base/css/partial/page.css at main · vivliostyle/themes](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-base/css/partial/page.css)
+- 使えるHTMLタグ一覧：[themes/packages/@vivliostyle/theme-base/css/common/basic.css at main · vivliostyle/themes](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-base/css/common/basic.css)
 - endnoteの生スタイル：[theme-base/css/partial/endnote.css ](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-base/css/partial/endnote.css)
 - footnoteのスタイル参考：[theme-techbook/theme.css](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-techbook/theme.css)
 - 閲覧用：[theme-bunko/theme.css](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-bunko/theme.css)

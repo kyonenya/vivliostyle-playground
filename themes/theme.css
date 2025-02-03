@@ -1,66 +1,38 @@
-@page {
-  size: 128mm 182mm; /* B6サイズ */
-}
-
 :root {
-  /**
-   *  Number of lines per page/Number of characters per line
-   */
+  --vs-page--size: 128mm 182mm; /* B6 +  */
+  --vs-page--bleed: 3mm; /* 塗り足し */
+
   --vs-theme--num-of-line: 17;
   --vs-theme--num-of-character: 45;
 
-  /* --vs-page--width: calc(1rem * var(--vs-line-height) * 17 + 1px); */
-  /**
-   *  Content to be displayed in the upper left/upper right corner of the page spread
-   */
-  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title); /* 章のタイトル */
-  --vs-theme--page-top-right-content: counter(page) '　　' env(pub-title); /* 本のタイトル */
-  /**
-   *  Indent size of subsection
-   */
-  --vs-theme--subsection-text-indent: 2rem;
-  /**
-   *  Color of anchor texts on screen media
-   */
-  --vs-theme--anchor-color-body: darkblue;
-  /* 
-   * page's margins
-   */
-  /* 天 */
-  --vs-page--margin-top: 50pt;
-  /* 地 */
-  --vs-page--margin-bottom: 38.4pt;
-  /* のど */
-  --vs-page--margin-inner: 58.3pt;
-  /* 小口 */
-  --vs-page--margin-outer: 35pt;
-  /* 
-   * base font-size
-   */
-  /* テーマ全体のベースの文字サイズ */
+  --vs-page--margin-top: 50pt; /* 天 */
+  --vs-page--margin-bottom: 38.4pt; /* 地 */
+  --vs-page--margin-inner: 58.3pt; /* のど */
+  --vs-page--margin-outer: 35pt; /* 小口 */
+
   --vs-font-size: 9.5pt;
-  /* 印刷用レイアウトの文字サイズ */
-  --vs-font-size-on-print: var(--vs-font-size);
+  --vs-font-size-on-print: var(--vs-font-size); /* unset */
+  --vs-line-height: calc((6 + 9.5) / 9.5);
 
-  /* (9.5+6)/9.5 を計算 */
-  --vs-line-height: calc(15.5 / 9.5);
-}
-
-@page {
-  @top-left {
-    margin-left: 4pt;
-    margin-top: 5mm;
-    font-size: 7pt;
-  }
-
-  @top-right {
-    margin-right: 4pt;
-    margin-top: 5mm;
-    font-size: 7pt;
+  /** 柱 */
+  --vs-page--mbox-font-size: 7pt;
+  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title); /* 章タイトル */
+  --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page); /* 本タイトル */
+  @page {
+    /* unset & set */
+    @top-left {
+      margin-left: 5pt;
+      margin-top: 5mm;
+    }
+    @top-right {
+      margin-right: 5pt;
+      margin-top: 5mm;
+    }
   }
 }
 
 p:has(small) {
+  /* 段落注 */
   --vs--small-font-size: 0.85rem;
-  line-height: calc(13.7 / 9.5);
+  line-height: calc((4.2 + 9.5) / 9.5);
 }

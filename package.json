@@ -2,7 +2,7 @@
   "name": "vivliostyle-playground",
   "description": "vivliostyle-playground",
   "version": "0.0.0",
-  "author": "kyonenya <kyon.musica@gmail.com>",
+  "author": "kyonenya <kyonenya.takashi@gmail.com>",
   "scripts": {
     "build": "vivliostyle build",
     "preview": "vivliostyle preview"

@@ -6,8 +6,8 @@
   "type": "Book",
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
   "name": "吾輩は猫である。",
-  "author": "kyonenya <kyon.musica@gmail.com>",
-  "dateModified": "2025-02-02T18:30:47.723Z",
+  "author": "kyonenya <kyonenya.takashi@gmail.com>",
+  "dateModified": "2025-02-03T14:36:11.735Z",
   "readingOrder": [
     {
       "url": "manuscript.html",
