@@ -1,23 +1,36 @@
 :root {
-  --vs-page--size: 128mm 182mm; /* B6 +  */
-  --vs-page--bleed: 3mm; /* 塗り足し */
+  /* B6 */
+  --vs-page--size: 128mm 182mm;
+  /* 塗り足し */
+  --vs-page--bleed: 3mm;
 
   --vs-theme--num-of-line: 17;
   --vs-theme--num-of-character: 45;
 
-  --vs-page--margin-top: 50pt; /* 天 */
-  --vs-page--margin-bottom: 38.4pt; /* 地 */
-  --vs-page--margin-inner: 58.3pt; /* のど */
-  --vs-page--margin-outer: 35pt; /* 小口 */
+  /* 天 */
+  --vs-page--margin-top: 50pt;
+  /* 地 */
+  --vs-page--margin-bottom: 38.4pt;
+  /* のど */
+  --vs-page--margin-inner: 58.3pt;
+  /* 小口 */
+  --vs-page--margin-outer: 35pt;
+
+  /* unset auto-calc */
+  --vs-page--width: auto;
+  --vs-page--height: auto;
 
   --vs-font-size: 9.5pt;
-  --vs-font-size-on-print: var(--vs-font-size); /* unset */
   --vs-line-height: calc((6 + 9.5) / 9.5);
+  /* unset */
+  --vs-font-size-on-print: var(--vs-font-size);
 
   /** 柱 */
   --vs-page--mbox-font-size: 7pt;
-  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title); /* 章タイトル */
-  --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page); /* 本タイトル */
+  /* 章タイトル */
+  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title);
+  /* 本タイトル */
+  --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page);
   @page {
     /* unset & set */
     @top-left {
