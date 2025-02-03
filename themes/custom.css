@@ -15,11 +15,12 @@
   --vs-page--margin-inner: 58.3pt;
   /* 小口 */
   --vs-page--margin-outer: 35pt;
-
   /* unset auto-calc */
   --vs-page--width: auto;
   --vs-page--height: auto;
 
+  --vs-font-family: 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'Times New Roman',
+    serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
   /* unset */
@@ -44,8 +45,16 @@
   }
 }
 
+/* 段落注 */
+small {
+  display: block;
+  /* 本文からみて2文字分字下げ */
+  padding-top: 2rem;
+  /* 文頭を頭出し */
+  text-indent: -1em;
+  line-height: calc(var(--vs-line-height) * 1.05);
+}
 p:has(small) {
-  /* 段落注 */
-  --vs--small-font-size: 0.85rem;
-  line-height: calc((4.2 + 9.5) / 9.5);
+  /* 本文と段落注の間の余白 */
+  margin: 0 0.33em;
 }
