@@ -3,7 +3,7 @@ module.exports = {
   author: 'kyonenya <kyonenya.takashi@gmail.com>', // default to `author` in `package.json` or undefined.
   // language: 'ja', // default to undefined.
   // size: 'A4', // paper size.
-  theme: ['@vivliostyle/theme-bunko@^2.0.0', 'themes/theme.css'], // .css or local dir or npm package. default to undefined.
+  theme: ['@vivliostyle/theme-bunko@^2.0.0', 'themes/custom.css'], // .css or local dir or npm package. default to undefined.
   entry: [
     'manuscript.md', // `title` is automatically guessed from the file (frontmatter > first heading).
     // {
