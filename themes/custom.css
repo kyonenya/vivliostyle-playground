@@ -1,12 +1,13 @@
 :root {
+  /**
+   * ページ設定
+   */
+  --vs-theme--num-of-line: 17;
+  --vs-theme--num-of-character: 45;
   /* B6 */
   --vs-page--size: 128mm 182mm;
   /* 塗り足し */
   --vs-page--bleed: 3mm;
-
-  --vs-theme--num-of-line: 17;
-  --vs-theme--num-of-character: 45;
-
   /* 天 */
   --vs-page--margin-top: 50pt;
   /* 地 */
@@ -19,32 +20,49 @@
   --vs-page--width: auto;
   --vs-page--height: auto;
 
+  /**
+   * フォント
+   */
   --vs-font-family: 'Times New Roman', '源瑛ちくご明朝 v3', sans-serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
   /* unset */
   --vs-font-size-on-print: var(--vs-font-size);
 
-  /** 柱 */
+  /**
+   * 柱
+   */
   --vs-page--mbox-font-size: 7pt;
   /* 章タイトル */
   --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title);
   /* 本タイトル */
   --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page);
-  @page {
-    /* unset & set */
-    @top-left {
-      margin-left: 5pt;
-      margin-top: 5mm;
-    }
-    @top-right {
-      margin-right: 5pt;
-      margin-top: 5mm;
-    }
+
+  /* unset */
+  --vs--bold-font-weight: normal;
+}
+
+/**
+ * 柱
+ */
+@page {
+  @top-left {
+    margin-left: 5pt;
+    margin-top: 5mm;
+  }
+  @top-right {
+    margin-right: 5pt;
+    margin-top: 5mm;
   }
 }
 
-/* 段落注 */
+strong {
+  text-emphasis-style: filled;
+}
+
+/**
+ * 段落注
+ */
 small {
   display: block;
   /* 本文からみて2文字分字下げ */
