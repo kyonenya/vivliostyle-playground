@@ -5,6 +5,7 @@
   "author": "kyonenya <kyonenya.takashi@gmail.com>",
   "scripts": {
     "build": "vivliostyle build",
+    "press-ready": "vivliostyle build --press-ready",
     "preview": "vivliostyle preview"
   },
   "dependencies": {
