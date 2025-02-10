@@ -26,6 +26,7 @@
   --vs-font-family: 'Times New Roman', '源瑛ちくご明朝 v3', sans-serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
+  --vs--small-font-size: 8.5pt;
   /* unset */
   --vs-font-size-on-print: var(--vs-font-size);
 
@@ -40,6 +41,10 @@
 
   /* unset */
   --vs--bold-font-weight: normal;
+
+  --vs--blockquote-margin-block: 1em;
+  /* unset */
+  --vs-spacing-inline-indent: 0;
 }
 
 /**
@@ -61,6 +66,26 @@ strong {
 }
 
 /**
+ * 引用
+ */
+blockquote {
+  margin-top: 2rem;
+}
+blockquote p {
+  /* unset */
+  text-indent: 0;
+}
+
+/**
+ * エピグラフ
+ */
+blockquote blockquote {
+  margin-top: 6rem;
+  font-size: var(--vs--small-font-size);
+  /* line-height: calc(var(--vs-line-height) * 1.05); */
+}
+
+/**
  * 段落注
  */
 small {
@@ -69,7 +94,7 @@ small {
   padding-top: 2rem;
   /* 文頭を頭出し */
   text-indent: -1em;
-  line-height: calc(var(--vs-line-height) * 1.05);
+  /* line-height: calc(var(--vs-line-height) * 1.05); */
 }
 p:has(small) {
   /* 本文と段落注の間の余白 */
