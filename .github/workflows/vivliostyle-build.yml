@@ -11,16 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: チェックアウト
-        uses: actions/checkout@v4 # こちらも v4 を推奨
+        uses: actions/checkout@v4
 
-      - name: Vivliostyle で PDF をビルド
-        uses: vivliostyle/action@v1
+      - name: Node.js をセットアップ
+        uses: actions/setup-node@v4 # v4 に更新
         with:
-          input: index.html
-          artifact-name: generated-pdf
+          node-version: 18 # 必要に応じて変更
+
+      - name: Vivliostyle CLI をインストール
+        run: npm install -g @vivliostyle/cli
+
+      - name: PDF をビルド
+        run: vivliostyle build -o output.pdf
 
       - name: ビルドした PDF をアップロード
         uses: actions/upload-artifact@v4 # v4 に更新
         with:
           name: pdf-output
-          path: output/*.pdf
+          path: output.pdf
