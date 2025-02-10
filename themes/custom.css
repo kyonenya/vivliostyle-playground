@@ -19,8 +19,7 @@
   --vs-page--width: auto;
   --vs-page--height: auto;
 
-  --vs-font-family: 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'Times New Roman',
-    serif;
+  --vs-font-family: 'Times New Roman', '源瑛ちくご明朝 v3', sans-serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
   /* unset */
@@ -57,4 +56,11 @@ small {
 p:has(small) {
   /* 本文と段落注の間の余白 */
   margin: 0 0.33em;
+}
+
+@font-face {
+  font-family: '源瑛ちくご明朝 v3';
+  src: url('./GenEiKoburiMin6-R.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
