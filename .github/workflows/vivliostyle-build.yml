@@ -3,7 +3,7 @@ name: Build PDF with Vivliostyle
 on:
   push:
     branches:
-      - main  # ← `main` ブランチにプッシュされたら実行
+      - main
   pull_request:
 
 jobs:
@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: チェックアウト
-        uses: actions/checkout@v3
-      
+        uses: actions/checkout@v4 # こちらも v4 を推奨
+
       - name: Vivliostyle で PDF をビルド
         uses: vivliostyle/action@v1
         with:
-          artifact-name: generated-pdf  # アーティファクトの名前（変更可）
+          input: index.html
+          artifact-name: generated-pdf
 
       - name: ビルドした PDF をアップロード
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # v4 に更新
         with:
           name: pdf-output
-          path: output/*.pdf  # PDF の出力パスを変更する場合は適宜調整
+          path: output/*.pdf
