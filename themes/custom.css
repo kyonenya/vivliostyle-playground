@@ -23,33 +23,25 @@
   /**
    * フォント
    */
-  --vs-font-family: 'Times New Roman', 'Yu Mincho', sans-serif;
+  /* 欧文フォントは先に指定しないと適用されない */
+  --vs-font-family: 'Yu Mincho', sans-serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
   --vs--small-font-size: 8.5pt;
   /* unset */
   --vs-font-size-on-print: var(--vs-font-size);
-
-  /**
-   * 柱
-   */
-  --vs-page--mbox-font-size: 7pt;
-  /* 章タイトル */
-  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title);
-  /* 本タイトル */
-  --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page);
-
-  /* unset */
-  --vs--bold-font-weight: normal;
-
-  --vs--blockquote-margin-block: 1em;
-  /* unset */
-  --vs-spacing-inline-indent: 0;
 }
 
 /**
  * 柱
  */
+:root {
+  --vs-page--mbox-font-size: 7pt;
+  /* 左ページ：章タイトル */
+  --vs-theme--page-top-left-content: counter(page) '　　' env(doc-title);
+  /* 右ページ：本タイトル */
+  --vs-theme--page-top-right-content: env(pub-title) '　　' counter(page);
+}
 @page {
   @top-left {
     margin-left: 5pt;
@@ -61,18 +53,39 @@
   }
 }
 
+/**
+ * 傍点
+ *
+ * @see https://junpei-sugiyama.com/text-top-dots
+ */
 strong {
-  text-emphasis-style: filled;
+  /* background-image: url(./fonts/sesame.png); */
+  /* 点の位置 */
+  /* background-position: top right; */
+  /* 縦方向に繰り返し */
+  /* background-repeat: repeat-y; */
+  /* 点の間隔 */
+  /* background-size: 1em; */
+  /* 文字と点の間隔 */
+  /* padding-right: 0.67em; */
+}
+:root {
+  /* --vs--bold-font-weight: normal; */
 }
 
 /**
- * 引用
+ * ブロック引用
  */
-blockquote {
-  margin-top: 2rem;
+:root {
+  --vs--blockquote-margin-block: 1rem;
+  --vs--blockquote-margin-inline: 2rem;
 }
 blockquote p {
-  /* unset */
+  /* 引用ブロックは字下げなし */
+  text-indent: 0;
+}
+blockquote + p {
+  /* 引用の後も改段落しない */
   text-indent: 0;
 }
 
@@ -82,7 +95,6 @@ blockquote p {
 blockquote blockquote {
   margin-top: 6rem;
   font-size: var(--vs--small-font-size);
-  /* line-height: calc(var(--vs-line-height) * 1.05); */
 }
 
 /**
@@ -94,11 +106,72 @@ small {
   padding-top: 2rem;
   /* 文頭を頭出し */
   text-indent: -1em;
-  /* line-height: calc(var(--vs-line-height) * 1.05); */
 }
 p:has(small) {
   /* 本文と段落注の間の余白 */
-  margin: 0 0.33em;
+  margin: 0 0.5em;
+}
+
+/**
+ * 章見出し
+ */
+:root {
+  --vs--h2-font-size: 1.35rem;
+  --vs--h2-font-weight: normal;
+  --vs--h2-letter-spacing: 0.125em;
+  --vs--h2-text-indent: 2rem;
+  /* --vs--h2-font-family: 'Times New Roman Bold', 'Yu Mincho Demibold'; */
+  /* unset */
+  --vs--h2-line-height: var(--vs-line-height);
+}
+h2 {
+  /* 前方向の余白は padding にして相殺されないようにする（例：改ページ後のh3） */
+  padding-block-start: 2rem;
+  /* 後方向の余白は margin にして相殺されるようにする（例：エピグラフ） */
+  margin-block-end: 1.5rem;
+  /* unset */
+  text-indent: var(--vs--h2-text-indent, var(--vs--heading-text-indent));
+}
+h2:has(+ .level3 h3) {
+  /* h2 と h3 が隣接する場合は余白を詰める */
+  margin-block-end: 0;
+}
+
+/**
+ * 節見出し
+ */
+:root {
+  --vs--h3-font-size: 1.18rem;
+  --vs--h3-text-indent: 4rem;
+  /* --vs--h3-font-family: 'Times New Roman Bold', 'Yu Mincho Demibold'; */
+  /* unset */
+  --vs--h3-line-height: var(--vs-line-height);
+}
+h3 {
+  padding-block-start: 2rem;
+  margin-block-end: 1.5rem;
+  /* unset */
+  text-indent: var(--vs--h3-text-indent, var(--vs--heading-text-indent));
+}
+
+/**
+ * 項見出し
+ */
+:root {
+  /** h4 */
+  --vs--h4-font-size: 1rem;
+  --vs--h4-line-height: 2rem;
+  /* h4以下 */
+  --vs-theme--subsection-text-indent: 1rem;
+}
+
+/**
+ * 章末注
+ */
+:root {
+  --vs-endnote--section-font-size: var(--vs--small-font-size);
+  --vs-endnote--section-margin-block: 2rem;
+  --vs-endnote--section-margin-inline: 0rem;
 }
 
 @font-face {
