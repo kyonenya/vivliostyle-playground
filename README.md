@@ -1,5 +1,6 @@
 # vivliostyle-playground
 
+- remarkプラグインの作り方：[Remark で広げる Markdown の世界](https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/spring-raining/index.html)
 - 目次は深さ `sectionDepth` も指定できるようになったらしい：[examples/table-of-contents](https://github.com/vivliostyle/vivliostyle-cli/tree/main/examples/table-of-contents)
   - →だとこの目的のために目次生成スクリプト組んでるけどアップデートで不要になったらしい：[技術書典13の執筆環境にVivliostyleを採用しました](https://zenn.dev/typebase_dev/articles/techbookfest13-vivliostyle#1.-%E7%9B%AE%E6%AC%A1%E3%81%8C%E3%81%84%E3%81%84%E6%84%9F%E3%81%98%E3%81%AB%E7%94%9F%E6%88%90%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84)
 - 実装例がたくさん載ってる examples：[vivliostyle-cli/examples · vivliostyle/vivliostyle-cli](https://github.com/vivliostyle/vivliostyle-cli/tree/main/examples)
