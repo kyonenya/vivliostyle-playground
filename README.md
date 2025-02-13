@@ -1,8 +1,13 @@
 # vivliostyle-playground
 
--  Actionsのワークフロー：[vivliostyle/action: 🔌 A github action for publication workflow](https://github.com/vivliostyle/action)
-- 目次いい感じ？[Add feature generating ToC/cover documents from existing Markdown/HTML by spring-raining · Pull Request #485 · vivliostyle/vivliostyle-cli](https://github.com/vivliostyle/vivliostyle-cli/pull/485)
-- 有益ツイート：[from:Uske_S vivliostyle - 検索 / X](https://x.com/search?q=from%3AUske_S%20vivliostyle&src=typed_query&f=live)
+- すげえ……任意のMarkdownパーサーを渡せる機能：[Vivliostyle (v8.16.0+) で mermaid.js の図を表示する](https://zenn.dev/mura_mi/articles/4f08cc99f19887)
+  - > vivliostyle-cli の設定ファイルに unified プロセッサーの生成ロジックを記載すれば、VFM ではなく自らが指定したプロセッサーに差し替えて利用することができる
+  - > package.json で "type": "module" を指定するのをお忘れなく
+- 奥付と改ページhrのやり方：[Vivliostyle: 技術同人誌をつくって入稿用PDFをビルドする（後編）](https://zenn.dev/sky_y/articles/markdown-advent-2020-vivliostyle4)
+- 複数ファイルや奥付の公式説明：[Create Book | docs.vivliostyle.org](https://docs.vivliostyle.org/ja/create-book.html)
+  - > なお、HTMLのタグがある行とmarkdownの行の間には、必ず空行をいれるよう注意してください。そうしないとエラーになります。
+- Actionsのワークフロー：[vivliostyle/action: 🔌 A github action for publication workflow](https://github.com/vivliostyle/action)
+  - 古くて動作しない
 - Vivliostyle CLIのドキュメント：[vivliostyle-cli/docs/ja/index.md at main · vivliostyle/vivliostyle-cli](https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/ja/index.md)
 - CSS変数一覧：[themes/packages/@vivliostyle/theme-base/css/partial/page.css at main · vivliostyle/themes](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-base/css/partial/page.css)
 - 使えるHTMLタグ一覧：[themes/packages/@vivliostyle/theme-base/css/common/basic.css at main · vivliostyle/themes](https://github.com/vivliostyle/themes/blob/main/packages/%40vivliostyle/theme-base/css/common/basic.css)
@@ -16,6 +21,7 @@
 
 ### フォント埋め込みエラーには文字のアウトライン化で対処する
 
+- press-readyの罠：入力ファイル名を日本語にしてはいけない：[Vivliostyle: 技術同人誌をつくって入稿用PDFをビルドする（後編）](https://zenn.dev/sky_y/articles/markdown-advent-2020-vivliostyle4#press-ready%E3%81%AE%E7%BD%A0%EF%BC%9A%E5%85%A5%E5%8A%9B%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%82%92%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AB%E3%81%97%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84)
 - [印刷用 PDF（PDF/X-1a 形式）の生成](https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/ja/special-output-settings.md#%E5%8D%B0%E5%88%B7%E7%94%A8-pdfpdfx-1a-%E5%BD%A2%E5%BC%8F%E3%81%AE%E7%94%9F%E6%88%90)
   - > 後処理のみ Docker 上で実行します
   - `preflightOption: ['gray-scale', 'enforce-outline'],`
