@@ -1,8 +1,12 @@
 # vivliostyle-playground
 
+- 目次は深さ `sectionDepth` も指定できるようになったらしい：[examples/table-of-contents](https://github.com/vivliostyle/vivliostyle-cli/tree/main/examples/table-of-contents)
+  - →だとこの目的のために目次生成スクリプト組んでるけどアップデートで不要になったらしい：[技術書典13の執筆環境にVivliostyleを採用しました](https://zenn.dev/typebase_dev/articles/techbookfest13-vivliostyle#1.-%E7%9B%AE%E6%AC%A1%E3%81%8C%E3%81%84%E3%81%84%E6%84%9F%E3%81%98%E3%81%AB%E7%94%9F%E6%88%90%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84)
+- 実装例がたくさん載ってる examples：[vivliostyle-cli/examples · vivliostyle/vivliostyle-cli](https://github.com/vivliostyle/vivliostyle-cli/tree/main/examples)
 - すげえ……任意のMarkdownパーサーを渡せる機能：[Vivliostyle (v8.16.0+) で mermaid.js の図を表示する](https://zenn.dev/mura_mi/articles/4f08cc99f19887)
   - > vivliostyle-cli の設定ファイルに unified プロセッサーの生成ロジックを記載すれば、VFM ではなく自らが指定したプロセッサーに差し替えて利用することができる
   - > package.json で "type": "module" を指定するのをお忘れなく
+  - 実装例：[examples/customize-processor/vivliostyle.config.js](https://github.com/vivliostyle/vivliostyle-cli/blob/main/examples/customize-processor/vivliostyle.config.js)
 - 奥付と改ページhrのやり方：[Vivliostyle: 技術同人誌をつくって入稿用PDFをビルドする（後編）](https://zenn.dev/sky_y/articles/markdown-advent-2020-vivliostyle4)
 - 複数ファイルや奥付の公式説明：[Create Book | docs.vivliostyle.org](https://docs.vivliostyle.org/ja/create-book.html)
   - > なお、HTMLのタグがある行とmarkdownの行の間には、必ず空行をいれるよう注意してください。そうしないとエラーになります。
