@@ -24,7 +24,7 @@
    * フォント
    */
   /* 欧文フォントは先に指定しないと適用されない */
-  --vs-font-family: 'Yu Mincho', sans-serif;
+  --vs-font-family: 'Times New Roman', 'Yu Mincho', sans-serif;
   --vs-font-size: 9.5pt;
   --vs-line-height: calc((6 + 9.5) / 9.5);
   --vs--small-font-size: 8.5pt;
@@ -177,6 +177,13 @@ h3 {
 @font-face {
   font-family: 'Yu Mincho';
   src: url('./yumin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('./times.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
