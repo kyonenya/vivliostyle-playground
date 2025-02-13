@@ -2,7 +2,7 @@ module.exports = {
   title: '吾輩は猫である。', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
   author: 'kyonenya <kyonenya.takashi@gmail.com>', // default to `author` in `package.json` or undefined.
   // language: 'ja', // default to undefined.
-  // size: 'A4', // paper size.
+  size: 'B6', // paper size.
   theme: ['@vivliostyle/theme-bunko@^2.0.0', 'themes/custom.css'], // .css or local dir or npm package. default to undefined.
   entry: [
     'manuscript.md', // `title` is automatically guessed from the file (frontmatter > first heading).
