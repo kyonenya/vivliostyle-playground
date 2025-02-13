@@ -12,5 +12,6 @@
     "@vivliostyle/cli": "latest"
   },
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "type": "module"
 }

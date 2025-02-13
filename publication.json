@@ -7,11 +7,11 @@
   "conformsTo": "https://github.com/vivliostyle/vivliostyle-cli",
   "name": "吾輩は猫である。",
   "author": "kyonenya <kyonenya.takashi@gmail.com>",
-  "dateModified": "2025-02-13T19:51:41.502Z",
+  "dateModified": "2025-02-13T22:45:04.390Z",
   "readingOrder": [
     {
       "url": "manuscript.html",
-      "name": "第一章"
+      "name": "吾輩は猫である。"
     }
   ],
   "resources": [],

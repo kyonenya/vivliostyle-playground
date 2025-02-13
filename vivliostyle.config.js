@@ -1,4 +1,38 @@
-module.exports = {
+import { VFM } from '@vivliostyle/vfm';
+
+export function rehypeRubyEmphasis() {
+  return (tree) => {
+    function transformStrongToRuby(node) {
+      if (node.type === 'element' && node.tagName === 'strong') {
+        const textNode = node.children.find((child) => child.type === 'text');
+        if (textNode) {
+          node.children = Array.from(textNode.value).flatMap((char) => [
+            {
+              type: 'element',
+              tagName: 'ruby',
+              properties: {},
+              children: [
+                { type: 'text', value: char },
+                {
+                  type: 'element',
+                  tagName: 'rt',
+                  properties: {},
+                  children: [{ type: 'text', value: '﹅' }],
+                },
+              ],
+            },
+          ]);
+        }
+      } else if (node.children) {
+        node.children.forEach(transformStrongToRuby);
+      }
+    }
+
+    transformStrongToRuby(tree);
+  };
+}
+
+export default {
   title: '吾輩は猫である。', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
   author: 'kyonenya <kyonenya.takashi@gmail.com>', // default to `author` in `package.json` or undefined.
   // language: 'ja', // default to undefined.
@@ -21,11 +55,13 @@ module.exports = {
   //     format: 'webpub',
   //   },
   // ],
-  // workspaceDir: '.vivliostyle', // directory which is saved intermediate files.
+  workspaceDir: '.vivliostyle', // directory which is saved intermediate files.
   // toc: true, // whether generate and include ToC HTML or not, default to 'false'.
   // cover: './cover.png', // cover image. default to undefined.
   // vfm: { // options of VFM processor
   //   hardLineBreaks: true, // converts line breaks of VFM to <br> tags. default to 'false'.
   //   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
   // },
+  documentProcessor: (config, metadata) =>
+    VFM(config, metadata).use(rehypeRubyEmphasis),
 };
