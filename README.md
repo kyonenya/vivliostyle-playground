@@ -1,5 +1,10 @@
 # vivliostyle-playground
 
+- U+0000–1FFF は主に欧文圏の文字や記号が占めている：[Unicode 区画一覧　　Unicode Blocks](http://occhann.web.fc2.com/References/UnicodeBlocks.html)
+- 混植にはunicode-range：[Webフォントの最適化05「unicode-range」 - Type Project Staff Blog](https://typeproject.com/staffblog/3464)
+- ダッシュが中央に来ない問題：[日本語表現（組版）での文字の問題について簡単なまとめ | 電書魂](http://densyodamasii.com/?p=3913)
+- 欧文フォントが先でいいのか。：[Web上の和欧混植HS](https://note.com/h_s_2022/n/nc8e7f9fb692e)
+- 縦書き三点リーダー：[縦書きHTMLにおける文字の向きはどのように定まるか - ドワンゴ教育サービス開発者ブログ](https://blog.nnn.dev/entry/2022/07/01/180000)
 - footnotes.tsを自前で換装：[vfm/src/plugins/footnotes.ts at main · vivliostyle/vfm](https://github.com/vivliostyle/vfm/blob/main/src/plugins/footnotes.ts)
 - [syntax-tree/hast-util-find-and-replace: utility to find and replace text in a hast tree](https://github.com/syntax-tree/hast-util-find-and-replace)
 - いや、パース後ではあるけどHTMLをreplaceするプラグインを渡せる：[vfm/src/plugins/replace.ts](https://github.com/vivliostyle/vfm/blob/main/src/plugins/replace.ts)
