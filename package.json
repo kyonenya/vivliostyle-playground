@@ -9,7 +9,8 @@
     "preview": "vivliostyle preview"
   },
   "dependencies": {
-    "@vivliostyle/cli": "latest"
+    "@vivliostyle/cli": "latest",
+    "@vivliostyle/vfm": "^2.2.1"
   },
   "license": "UNLICENSED",
   "private": true,
