@@ -1,5 +1,8 @@
 # vivliostyle-playground
 
+- 自動生成された目次と表紙のカスタマイズ：[vivliostyle-cli/examples/customize-generated-content](https://github.com/vivliostyle/vivliostyle-cli/tree/main/examples/customize-generated-content)
+- 目次 toc の生成：[vivliostyle-cli/docs/ja/toc-page.md](https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/ja/toc-page.md)
+- 表紙 cover ページの作り方：[vivliostyle-cli/docs/ja/cover-page.md](https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/ja/cover-page.md)
 - U+0000–1FFF は主に欧文圏の文字や記号が占めている：[Unicode 区画一覧　　Unicode Blocks](http://occhann.web.fc2.com/References/UnicodeBlocks.html)
 - 混植にはunicode-range：[Webフォントの最適化05「unicode-range」 - Type Project Staff Blog](https://typeproject.com/staffblog/3464)
 - ダッシュが中央に来ない問題：[日本語表現（組版）での文字の問題について簡単なまとめ | 電書魂](http://densyodamasii.com/?p=3913)
